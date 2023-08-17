@@ -1,35 +1,38 @@
 {
-  "name": "panelbox",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "build-static-webapp": "expo build:web"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/preset-env": "^7.22.10",
-    "@babel/preset-react": "^7.22.5",
-    "@storybook/addon-essentials": "^7.3.1",
-    "@storybook/addon-interactions": "^7.3.1",
-    "@storybook/addon-links": "^7.3.1",
-    "@storybook/addon-onboarding": "^1.0.8",
-    "@storybook/blocks": "^7.3.1",
-    "@storybook/react": "^7.3.1",
-    "@storybook/react-webpack5": "^7.3.1",
-    "@storybook/testing-library": "^0.2.0",
-    "prop-types": "^15.8.1",
+  "name": "boxplayground1",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.3.1"
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
-  "dependencies": {
-    "react-dnd": "^16.0.1",
-    "react-dnd-html5-backend": "^16.0.1"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
