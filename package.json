@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build-static-webapp": "expo build:web"
   },
   "keywords": [],
   "author": "",
@@ -26,5 +27,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.3.1"
+  },
+  "dependencies": {
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1"
   }
 }
