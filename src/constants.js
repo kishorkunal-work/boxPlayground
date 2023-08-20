@@ -14,7 +14,7 @@ export const COLOR_CODE = {
 export const ItemType = {
 	SIDE_PANEL: 'Side Panel',
 	PLENUM_PANEL: 'Plenum Panel',
-	ROOF_PANEL: 'RoofPanel',
+	ROOF_PANEL: 'Roof Panel',
 	BAG_FILTER_PANEL: 'Bag Filter Panel',
 	CEILING_FILTER_FRAME: 'Ceiling Filter Frame',
 	MISCELLENEOUS: 'Miscellaneous',

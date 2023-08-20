@@ -18,6 +18,6 @@ function CAGroupBox({ group }) {
 	);
 }
 CAGroupBox.propTypes = {
-	group: PropTypes.object.isRequired,
+	group: PropTypes.array.isRequired,
 };
 export default CAGroupBox;

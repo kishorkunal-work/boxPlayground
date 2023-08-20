@@ -4,9 +4,8 @@ import { useDrag } from 'react-dnd';
 import './CLLibraryBox.scss';
 
 function CLLibraryBox({ item, size, backgroundColor }) {
-	console.log(item);
 	const [{ isDragging }, drag] = useDrag(() => ({
-		type: item.Type,
+		type: item.Type ? item.Type : '',
 		item: item,
 		collect: (monitor) => ({
 			isDragging: !!monitor.isDragging(),
@@ -35,7 +34,7 @@ function CLLibraryBox({ item, size, backgroundColor }) {
 
 CLLibraryBox.propTypes = {
 	backgroundColor: PropTypes.string.isRequired,
-	size: PropTypes.string.isRequired,
+	size: PropTypes.number.isRequired,
 	item: PropTypes.object.isRequired,
 };
 

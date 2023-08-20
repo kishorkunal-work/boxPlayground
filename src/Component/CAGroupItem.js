@@ -18,6 +18,7 @@ function CAGroupItem({ item }) {
 						key={'EB_' + index}
 						color={item.Color}
 						size={item.size}
+						item={item}
 					/>
 				);
 			})}

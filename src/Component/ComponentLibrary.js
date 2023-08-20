@@ -6,6 +6,8 @@ const ComponentLibrary = () => {
 	LibraryBoxTypes.forEach((type) => {
 		type.Items.forEach((item) => {
 			item.Type = type.CategoryName;
+			item.Color_BG = type.Color_BG;
+			item.Size = type.Size;
 		});
 	});
 
@@ -28,9 +30,16 @@ const ComponentLibrary = () => {
 							display: 'flex',
 							textAlign: 'center',
 							borderBottom: '2px solid black',
+							backgroundColor: COLOR_CODE.YELLOW_BG,
+							alignItems: 'center',
 						}}
 					>
-						<div style={{ flex: '2', backgroundColor: COLOR_CODE.YELLOW_BG }}>
+						<div
+							style={{
+								flex: '2',
+								color: type.TextColor,
+							}}
+						>
 							{type.CategoryName}
 						</div>
 						<div
@@ -38,7 +47,7 @@ const ComponentLibrary = () => {
 								flex: '1',
 								backgroundColor: COLOR_CODE.PINK_BG,
 								display: 'flex',
-								alignItems: 'center',
+								justifyContent: 'center',
 							}}
 						>
 							{type.Items.filter((k) => k.IsStandard).map(
