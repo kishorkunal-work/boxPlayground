@@ -1,0 +1,2 @@
+.app{align-items:center;display:flex;height:100vh;justify-content:center}.library{border:1px solid #ccc;margin-right:20px;padding:20px}.library .box{height:50px;margin:5px;width:50px}.chessboard{border:1px solid #ccc;display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(8,1fr);height:400px;width:400px}.chess-cell{align-items:center;background-color:#f0f0f0;display:flex;justify-content:center}.box{height:100%;width:100%}
+/*# sourceMappingURL=main.c38a80d6.css.map*/
