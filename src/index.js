@@ -21,6 +21,10 @@ root.render(
 						path="/login"
 						element={<Login />}
 					/>
+					<Route
+						path="/assembly"
+						element={<App />}
+					/>
 				</Routes>
 			</div>
 			{/* <App /> */}
