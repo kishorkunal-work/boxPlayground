@@ -1,0 +1,383 @@
+{
+	"application": {
+		"title": "Oven Configurator",
+		"company": "Taikisha India",
+		"menu": {
+			"home": "Home",
+			"manage": "Manage",
+			"users": "Users",
+			"master_data": "Master Files",
+			"language": "Language",
+			"english": "English",
+			"japanese": "日本",
+			"profile": "Profile",
+			"sign_out": "Sign Out"
+		},
+		"domain": {
+			"client_name": "Client Name",
+			"plant_name": "Plant Name",
+			"project_name": "Project Name",
+			"facility_name": "Facility Name",
+			"facility_code": "Facility Code",
+			"project_code": "Project Code",
+			"project_code_tm": "Project Code (TM Number)",
+			"project_code_drw": "Project Code (Drawings)",
+			"component_lib_type": "Component Library Type",
+			"individual_equip_wise": "Individual equipment wise",
+			"common_for_all": "Common for all equipment",
+			"cell": "Cell",
+			"module": "Module",
+			"zone": "Zone",
+			"internal_duct": "Internal Duct",
+			"L": "L (m)",
+			"moc": "MOC",
+			"moc_roof_side_panel": "Roof / Side Panel",
+			"moc_floor_panel": "Floor Panel",
+			"moc_internal_duct": "Internal Duct",
+			"insulation_spec": "Insulation Specification",
+			"symmetry": "Symmetry",
+			"conventional": "Conventional",
+			"type": "Type",
+			"wb": "Wb (mm)",
+			"hb": "Wb (mm)",
+			"lb": "Wb (mm)",
+			"wb_door_open": "Wb Door Open",
+			"body_dimension_dc": "Body Dimension (Door Close)",
+			"conveyor_type": "Conveyor Type",
+			"ct_inverted": "Inverted",
+			"ct_dolly": "Dolly",
+			"oven_section_dimension": "Oven Section Dimension",
+			"k_t_inner": "K Type Inner",
+			"sb_dio_t_inner": "SB,DIO Type Inner",
+			"sbdio_k_t_inner": "SB/DIO + K Type Inner",
+			"sbsb_t_inner": "SB + SB Type Inner",
+			"kk_t_inner": "K + K Type Inner",
+			"in": "In",
+			"out": "Out",
+			"in_out": "In/Out",
+			"ut": "U _Turn",
+			"af_outlet": "Air Filter (Outlet)",
+			"as_length": "Air Seal Length (mm)",
+			"as_type": "Air Seal Type",
+			"shadow_mask_qty": "Shadow Mask Quantity (mm)",
+			"compartment": "Compartment",
+			"body_dimension": "Body Dimension",
+			"layout_image": "Layout Image",
+			"zone_name": "Zone Name",
+			"oven_section_type": "Oven Section Type",
+			"internal_duct_type": "Internal Duct Type",
+			"insulation": "Insulation",
+			"zone_length": "Zone Length",
+			"template_file_name": "Template File Name",
+			"project_file_name": "Project File Name"
+		}
+	},
+	"pages": {
+		"common": {
+			"labels": {
+				"note": "Note",
+				"notes": "Notes",
+				"ok": "OK",
+				"cancel": "Cancel",
+				"no_records": "No records found",
+				"no_files": "No files found",
+				"select": "Select",
+				"standard": "Standard",
+				"user_selected": "User Selected",
+				"export": "Export",
+				"list_files": "List Creo Files",
+				"sno": "S.No",
+				"remarks": "Remarks",
+				"filters": "Filters",
+				"filter": "Filter",
+				"status": "Status",
+				"action": "Action",
+				"actions": "Actions",
+				"update": "Update",
+				"change": "Change",
+				"confirm_action": "Confirm Action",
+				"submit": "Submit",
+				"not_available": "NA",
+				"main_models": "Main Models",
+				"lite_models": "Lite Models",
+				"close": "Close",
+				"file_list": "File List",
+				"all": "All",
+				"active": "Active",
+				"calculate": "Calculate",
+				"last_updated": "Last Updated"
+			}
+		},
+		"login": {
+			"labels": {
+				"title": "Please sign into your account"
+			},
+			"placeholders": {
+				"username": "Enter your User ID",
+				"password": "Enter your password"
+			},
+			"buttons": {
+				"submit": "Sign In"
+			}
+		},
+		"projects": {
+			"labels": {
+				"title": "Home",
+				"projects": "Projects",
+				"change_status_title": "Change project status",
+				"change_status_msg": "Do you really want to change the project status?",
+				"delete_prj_title": "Delete project?",
+				"delete_prj_msg": "Do you really want to delete the project?",
+				"ph_project_code": "Enter project code",
+				"ph_facility_code": "Enter facility code",
+				"ph_project_name": "Enter project name",
+				"ph_client_name": "Enter client name",
+				"ph_facility_name": "Enter facility name",
+				"ph_plant_name": "Enter plant name",
+				"processing": "Processing",
+				"open": "Open",
+				"closed": "Closed",
+				"no_projects": "No projects found",
+				"screenshot_success": "Successfully captured screenshot of Stage"
+			},
+			"buttons": {
+				"filter": "@:pages.common.labels.filter",
+				"new_project": "Start New Oven",
+				"edit_project": "Edit Project",
+				"delete_project": "Delete Project",
+				"view_summary": "View Summary",
+				"export_summary": "Export Summary",
+				"change_prj_status": "Change Project Status"
+			}
+		},
+		"master": {
+			"labels": {
+				"title": "Manage Master Files",
+				"file_name": "File Name",
+				"master_type": "Master File Type",
+				"uploaded_date": "Uploaded Date",
+				"uploaded_by": "Uploaded By",
+				"in_use": "Active",
+				"backup": "Backup",
+				"invalid": "Invalid format or file",
+				"delete_confirmation_title": "Delete Data File?",
+				"delete_confirmation_msg": "Do you really want to delete the data file?",
+				"set_current_confirmation_title": "Set master?",
+				"set_current_confirmation_msg": "Do you really want to set the current file as the master data for the application?",
+				"upload_confirmation_title": "Upload master data file?",
+				"main_model": "Main Model",
+				"lite_model": "Lite Model",
+				"set_master": "Set as master",
+				"view_data": "View Master Data",
+				"housing_type": "Housing Type",
+				"none_active_title": "No Active Master",
+				"none_active_msg": "No Active Master File(s) found. Please set a master file each for MAIN & LITE models as Active and then create a project"
+			},
+			"buttons": {
+				"view_data": "View Data",
+				"set_master": "Set Current Master",
+				"delete_master": "Delete Master File",
+				"upload_file": "Upload Master File"
+			}
+		},
+		"users": {
+			"labels": {
+				"title": "Manage Users",
+				"users": "Users",
+				"user_id": "User ID",
+				"role": "Role(s)",
+				"disabled": "Disabled",
+				"first_name": "First Name",
+				"last_name": "Last Name",
+				"phone": "Phone",
+				"roles": "Role(s)",
+				"email": "Email",
+				"ph_userid": "Enter UserID",
+				"ph_pwd": "Enter Password",
+				"ph_email": "Enter Email",
+				"user": "User",
+				"administrator": "Administrator",
+				"new_user": "New User",
+				"no_users": "No Users found",
+				"leader": "Leader"
+			},
+			"buttons": {
+				"edit_user": "Edit User Information",
+				"reset_password": "Reset User Password",
+				"disable_account": "Disable User Account",
+				"enable_account": "Enable Use Account"
+			}
+		},
+		"profile": {
+			"labels": {
+				"user_id": "@:pages.users.labels.user_id",
+				"email": "@:pages.users.labels.email",
+				"first_name": "@:pages.users.labels.first_name",
+				"last_name": "@:pages.users.labels.last_name",
+				"phone": "@:pages.users.labels.phone",
+				"role": "@:pages.users.labels.role",
+				"change_pwd": "Change Password",
+				"old_pwd": "Old Password",
+				"new_pwd": "New Password"
+			}
+		},
+		"new_project": {
+			"labels": {
+				"title": "New Oven Design",
+				"alt_title": "Edit Oven Design",
+				"all_mandatory": "All fields are mandatory",
+				"step_1_title": "Project Detail",
+				"step_2_title": "Shape",
+				"step_3_title": "Sizing",
+				"step_4_title": "Summary",
+				"library_title": "Library",
+				"shape_title": "@:pages.new_project.labels.step_2_title",
+				"entry_exit_modules": "Entry & Exit Modules",
+				"straight_zone_modules": "Straight Zone Modules",
+				"90_uturn_modules": "90° & U_Turn Modules",
+				"scroll_for_module_list": "Scroll down for modules list",
+				"module_list_title": "Module List",
+				"basic_input_title": "Basic Input",
+				"st_zone_single": "Straight Zone (Single)",
+				"st_zone_double": "Straight Zone (Double)",
+				"pre_heat": "Pre_Heat",
+				"sl_zone_single": "Slant Zone (Single)",
+				"sl_zone_double": "Slant Zone (Double)",
+				"ut_symmetry": "U_Turn Symmetry",
+				"ut_conventional": "U_Turn Conventional",
+				"as_single": "Air Seal (Single)",
+				"as_double": "Air Seal (Double)",
+				"heat_panel": "Heat Panel",
+				"9t_single": "90 Turn (Single)",
+				"9t_double": "90 Turn (Double)",
+				"section_not_seen": "Don't see section dimensions? Add modules to create a shape, validate and check again",
+				"note_st_zone_width": "Width of straight zone should be decided according to width of standard U_turn (if used)",
+				"note_st_zone_height": "Height of straight zone should be decided according to height of standard slant zone (if used)",
+				"summary_title": "Design Summary",
+				"zone_length": "@:application.domain.zone_length",
+				"module_type": "Module Type",
+				"design_summary_for_prj": "Design Summary for Project",
+				"components_on_stage": "Components on Stage:",
+				"tile_count_stage": "No. tiles on Stage:",
+				"tile": "Tile",
+				"new": "New"
+			},
+			"buttons": {
+				"previous": "Prev",
+				"next": "Next",
+				"submit": "Submit",
+				"reset": "Reset"
+			},
+			"tooltips": {
+				"rotate_left": "Rotate Left 90°",
+				"rotate_right": "Rotate Right 90°",
+				"reset_rotation": "Reset Rotation",
+				"clear_shape": "Clear Shape",
+				"validate_shape": "Validate Shape",
+				"clear_validation": "Clear validation results",
+				"capture_screenshot": "Capture Screenshot",
+				"help": "Help",
+				"debug_info": "Dump debug information"
+			},
+			"dialog": {
+				"help": {
+					"title": "Help",
+					"points": {
+						"create": {
+							"q": "Creating the Shape",
+							"a": "Components may be dragged from the toolbox and dropped into the Stage"
+						},
+						"selection": {
+							"q": "Selecting components (so you can rotate them)",
+							"a": "Click a component in the grid to 'Select'. Clicking the same element again toggles the selection. You may also click the 'Clear selection' button on the right toolbar for the same result."
+						},
+						"removal": {
+							"q": "Removing a component from the layout",
+							"a": "Double_click a component to remove it from the layout grid."
+						},
+						"rotation": {
+							"q": "Rotating components",
+							"a": "Select a component and click on either of the 'rotate' buttons to rotate the tiles. Click 'Reset' to restore to original position."
+						},
+						"validation": {
+							"q": "Validating the layout",
+							"a": "Click the 'Validate' button to validate the layout."
+						},
+						"clear_validation": {
+							"q": "Clear validation result",
+							"a": "Click the 'Clear selection/validation results' button on the right toolbar."
+						},
+						"restart": {
+							"q": "Starting afresh",
+							"a": "Click the 'Clear' button to clear an existing layout."
+						}
+					}
+				},
+				"debug": {
+					"title": "Debug Console",
+					"instruction": "Please copy the following info and send it to the developer along with a screenshot of the layout"
+				}
+			}
+		}
+	},
+	"messages": {
+		"offline": "Application is now ready to work in offline mode",
+		"new_content": "New content is available. Click on 'Refresh' button to update",
+		"action": {
+			"invalid": "Invalid Action",
+			"login": "Authentication",
+			"list_users": "Retrieving Users",
+			"list_roles": "Retrieving Roles",
+			"password_reset": "Password Reset",
+			"enable_user_account": "Enabling User Account",
+			"disable_user_account": "Disabling User Account",
+			"update_account_details": "Updating Account Details",
+			"account_creation": "User Account Creation",
+			"capture_screenshot": "Screenshot Capture",
+			"shape_validation": "Shape Validation",
+			"user_update": "Account Details Update",
+			"password_update": "Password Update"
+		},
+		"error": {
+			"shape_designer": {
+				"use_all": "All components on the Stage must be part of the Shape. If you don't intend to use a component, please remove it from the Stage",
+				"end_with_exit": "Shape must end with an exit",
+				"multiple_exit": "More than 1 exit found",
+				"no_exit": "Exit not found",
+				"multiple_entrance": "More than 1 entrance found",
+				"no_entrance": "Entrance not found",
+				"no_components": "Components not available on Stage. Drag and drop a few components and try again.",
+				"no_selection": "Select a component on Stage",
+				"no_rotation": "Rotation is not possible as the required positions are already occupied.",
+				"loop_back": "\tLooping back. Tile has already been visited: {0}",
+				"no_tile": "Tile not available"
+			},
+			"login": "User authentication failed",
+			"list_users": "Failed to retrieve users",
+			"list_roles": "Failed to retrieve roles",
+			"password_reset": "Failed to reset password",
+			"enable_user_account": "Failed to enable user account",
+			"disable_user_account": "Failed to disable user account",
+			"update_account_details": "Failed to update user account details",
+			"account_creation": "Failed to create user account",
+			"capture_screenshot": "Failed to capture screenshot",
+			"shape_validation": "Validation complete. Shape is valid. Reason: {0}",
+			"user_update": "Failed to update account details",
+			"password_update": "Failed to update password"
+		},
+		"success": {
+			"login": "User authentication successfully",
+			"list_users": "Retrieved users successfully",
+			"list_roles": "Retrieve application roles successfully",
+			"password_reset": "Password was reset successfully",
+			"enable_user_account": "User account was enabled successfully",
+			"disable_user_account": "User account was disabled successfully",
+			"update_account_details": "User account details updated successfully",
+			"account_creation": "User account was created successfully",
+			"capture_screenshot": "Screenshot was captured successfully",
+			"shape_validation": "Validation complete. Shape is invalid",
+			"user_update": "Account details were updated successfully",
+			"password_update": "Password was updated successfully"
+		}
+	}
+}

@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ComponentAssembly from './ComponentAssembly';
-import ComponentLibrary from './ComponentLibrary';
+import SelectionLibrary from './SelectionLibrary';
 
 function PanelAssembly() {
 	return (
 		<div style={{ display: 'flex' }}>
 			<div style={{ flex: '2' }}>
-				<ComponentLibrary />
+				<SelectionLibrary />
 			</div>
-			<div style={{ flex: '3' }}>
+			<div style={{ flex: '3', maxWidth: '55vw', overflowX: 'auto' }}>
 				<ComponentAssembly />
 			</div>
 		</div>

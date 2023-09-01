@@ -1,16 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './Pages/Login';
+import ProjectList from './Pages/ProjectList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<DndProvider backend={HTML5Backend}>
+		<BrowserRouter>
+			{/* <div className="App">
+				<Routes>
+					<Route
+						path="/"
+						element={<ProjectList />}
+					/>
+					<Route
+						path="/login"
+						element={<Login />}
+					/>
+				</Routes>
+			</div> */}
 			<App />
-		</DndProvider>
+		</BrowserRouter>
 	</React.StrictMode>
 );
 

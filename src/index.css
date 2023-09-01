@@ -1,13 +1,256 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html {
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+  } */
+
+html {
+	overflow-y: scroll;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+	html {
+		font-family: 'Roboto', system-ui, sans-serif;
+	}
+}
+
+#nprogress {
+	pointer-events: none;
+}
+
+#nprogress .bar {
+	@apply bg-rose-700 opacity-100;
+
+	position: fixed;
+	z-index: 1031;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 5px;
+}
+
+.router-link-active {
+	@apply font-bold text-taikisha;
+}
+
+.router-link-exact-active {
+	text-decoration: none;
+	@apply font-bold;
+}
+
+/* START Standard components */
+.zebra tbody tr {
+	@apply odd:bg-gray-300;
+}
+
+.section {
+	@apply border border-gray-400/50 overflow-hidden sm:rounded-md p-4 m-4 ml-1 mt-0;
+}
+
+.form-element {
+	@apply flex flex-wrap w-full items-center justify-start m-2;
+}
+
+.form-label {
+	@apply text-sm font-medium text-gray-700 w-[195px];
+}
+
+.form-label-bold {
+	@apply text-sm font-semibold text-gray-500 w-[195px];
+}
+
+.form-field {
+	@apply flex-col grow-[2] focus:ring-taikisha focus:border-taikisha shadow-sm sm:text-sm border-gray-300 rounded-md;
+}
+
+.form-field-disabled {
+	@apply flex-col grow-[2] focus:ring-taikisha focus:border-taikisha shadow-sm sm:text-sm text-gray-700 bg-gray-100 border-gray-300 rounded-md;
+}
+
+.th {
+	@apply text-sm font-semibold text-gray-500 px-4 py-4 text-left align-top;
+}
+
+.th.center {
+	@apply text-sm font-semibold text-gray-500 px-4 py-4 text-center align-top;
+}
+
+.td {
+	@apply px-4 py-2 text-sm font-normal text-gray-900 text-left;
+}
+
+.td.center {
+	@apply px-4 py-2 text-sm font-normal text-gray-900 text-center;
+}
+
+.component-title {
+	@apply my-[5px] px-[3px] py-[5px] sm:rounded-md border border-gray-500/50 bg-gray-300 min-w-full flex justify-center items-center text-lg font-bold;
+}
+
+.component-title-short {
+	@apply my-[5px] px-[10px] py-[5px] pl-0 w-44 flex justify-start items-start text-lg font-bold;
+}
+
+.system-selected {
+	@apply text-taikisha font-bold px-4 py-2 text-sm text-left;
+}
+
+.system-selected-data {
+	@apply text-taikisha font-semibold px-4 pl-7 py-2 text-sm text-left;
+}
+
+.button {
+	@apply flex space-x-2 justify-center items-center px-6 py-2 text-gray-800 text-sm border bg-gray-100 rounded-md outline-none ring-offset-2 ring-blue-600 focus:ring-2 disabled:opacity-40;
+}
+
+.square-button {
+	@apply flex space-x-2 justify-center items-center px-6 py-2 text-gray-800 text-sm border bg-gray-100 rounded-md outline-none ring-offset-2 ring-blue-600 focus:ring-2 w-28 h-28 disabled:opacity-40;
+}
+
+.outline-button {
+	@apply bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded disabled:opacity-40;
+}
+
+.outline-button-sm {
+	@apply bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-2 border border-blue-500 hover:border-transparent rounded disabled:opacity-40;
+}
+
+.dropdown:focus-within .dropdown-menu {
+	opacity: 1;
+	transform: translate(0) scale(1);
+	visibility: visible;
+}
+
+.ribbon {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+	position: absolute;
+	z-index: -1;
+	content: '';
+	display: block;
+	border: 5px solid #2980b9;
+}
+.ribbon span {
+	position: absolute;
+	display: block;
+	width: 225px;
+	padding: 15px 0;
+	background-color: #3498db;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	color: #fff;
+	font: 700 16px/1 'Roboto', sans-serif;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* top left*/
+.ribbon-top-left {
+	top: -10px;
+	left: -10px;
+}
+.ribbon-top-left::before,
+.ribbon-top-left::after {
+	border-top-color: transparent;
+	border-left-color: transparent;
+}
+.ribbon-top-left::before {
+	top: 0;
+	right: 0;
+}
+.ribbon-top-left::after {
+	bottom: 0;
+	left: 0;
+}
+.ribbon-top-left span {
+	right: -25px;
+	top: 30px;
+	transform: rotate(-45deg);
+}
+
+/* top right*/
+.ribbon-top-right {
+	top: -10px;
+	right: -10px;
+}
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+	border-top-color: transparent;
+	border-right-color: transparent;
+}
+.ribbon-top-right::before {
+	top: 0;
+	left: 0;
+}
+.ribbon-top-right::after {
+	bottom: 0;
+	right: 0;
+}
+.ribbon-top-right span {
+	left: -25px;
+	top: 30px;
+	transform: rotate(45deg);
+}
+
+/* bottom left*/
+.ribbon-bottom-left {
+	bottom: -10px;
+	left: -10px;
+}
+.ribbon-bottom-left::before,
+.ribbon-bottom-left::after {
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+}
+.ribbon-bottom-left::before {
+	bottom: 0;
+	right: 0;
+}
+.ribbon-bottom-left::after {
+	top: 0;
+	left: 0;
+}
+.ribbon-bottom-left span {
+	right: -25px;
+	bottom: 30px;
+	transform: rotate(225deg);
+}
+
+/* bottom right*/
+.ribbon-bottom-right {
+	bottom: -10px;
+	right: -10px;
+}
+.ribbon-bottom-right::before,
+.ribbon-bottom-right::after {
+	border-bottom-color: transparent;
+	border-right-color: transparent;
+}
+.ribbon-bottom-right::before {
+	bottom: 0;
+	left: 0;
+}
+.ribbon-bottom-right::after {
+	top: 0;
+	right: 0;
+}
+.ribbon-bottom-right span {
+	left: -25px;
+	bottom: 30px;
+	transform: rotate(-225deg);
+}
+
+/* END Standard Components */
+
+.font-devanagari {
+	font-family: Samarkan;
 }

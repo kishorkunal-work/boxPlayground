@@ -1,0 +1,383 @@
+{
+	"application": {
+		"title": "Oven Configurator",
+		"company": "Taikisha India",
+		"menu": {
+			"home": "ホーム",
+			"manage": "マネージャー",
+			"users": "ユーザー",
+			"master_data": "マスターファイル",
+			"language": "言語",
+			"english": "英語",
+			"japanese": "日本",
+			"profile": "ユーザー情報",
+			"sign_out": "サインアウト"
+		},
+		"domain": {
+			"client_name": "客先名",
+			"plant_name": "工場名",
+			"project_name": "プロジェクト名",
+			"facility_name": "装置名",
+			"facility_code": "装置コード",
+			"project_code": "プロジェクトフォルダ名",
+			"project_code_tm": "JOB番号.",
+			"project_code_drw": "フォルダ名",
+			"component_lib_type": "図面構成",
+			"individual_equip_wise": "共通製作図無し",
+			"common_for_all": "共通製作図有り",
+			"cell": "セル",
+			"module": "モジュール名",
+			"zone": "ゾーン名",
+			"internal_duct": "内部ダクト",
+			"L": "L (m)",
+			"moc": "材料",
+			"moc_roof_side_panel": "天井 / 側パネル",
+			"moc_floor_panel": "床パネル",
+			"moc_internal_duct": "内部ダクト",
+			"insulation_spec": "保温仕様",
+			"symmetry": "シンメトリー",
+			"conventional": "循環",
+			"type": "Type",
+			"wb": "Wb (mm)",
+			"hb": "Wb (mm)",
+			"lb": "Wb (mm)",
+			"wb_door_open": "Wb ドア開",
+			"body_dimension_dc": "ボディー寸法（ドア閉）",
+			"conveyor_type": "CVタイプ",
+			"ct_inverted": "インバーテッド",
+			"ct_dolly": "ドーリー",
+			"oven_section_dimension": "オーブン断面寸法",
+			"k_t_inner": "K型",
+			"sb_dio_t_inner": "SB型,DIO型",
+			"sbdio_k_t_inner": "SB/DIO + K タイプ",
+			"sbsb_t_inner": "SB + SBタイプ",
+			"kk_t_inner": "K + K タイプ",
+			"in": "In",
+			"out": "Out",
+			"in_out": "In/Out",
+			"ut": "U_Turn",
+			"af_outlet": "吹出口フィルター",
+			"as_length": "エアーシール長 (mm)",
+			"as_type": "エアーシールタイプ",
+			"shadow_mask_qty": "シャドウマスクとの距離 (mm)",
+			"compartment": "仕切り数",
+			"body_dimension": "ボディ寸法",
+			"layout_image": "レイアウトイメージ",
+			"zone_name": "ゾーン名",
+			"oven_section_type": "オーブン断面タイプ",
+			"internal_duct_type": "内部ダクトタイプ",
+			"insulation": "保温",
+			"zone_length": "ソーン長",
+			"template_file_name": "テンプレートファイル名",
+			"project_file_name": "プロジェクトファイル名"
+		}
+	},
+	"pages": {
+		"common": {
+			"labels": {
+				"note": "注記",
+				"notes": "注記",
+				"ok": "OK",
+				"cancel": "キャンセル",
+				"no_records": "記録がありません",
+				"no_files": "記録がありません",
+				"select": "選択",
+				"standard": "標準",
+				"user_selected": "ユーザー選択",
+				"export": "エキスポート",
+				"list_files": "Creoファイルのリスト",
+				"sno": "S.No",
+				"remarks": "備考",
+				"filters": "検索",
+				"filter": "検索",
+				"status": "状況",
+				"action": "動作",
+				"actions": "動作",
+				"update": "更新",
+				"change": "変更",
+				"confirm_action": "動作の確認",
+				"submit": "提出",
+				"not_available": "該当無し",
+				"main_models": "標準モデル",
+				"lite_models": "簡易モデル",
+				"close": "閉じる",
+				"file_list": "ファイルリスト",
+				"all": "全て",
+				"active": "動作中",
+				"calculate": "計算",
+				"last_updated": "Last Updated"
+			}
+		},
+		"login": {
+			"labels": {
+				"title": "アカウントでサインイン願います"
+			},
+			"placeholders": {
+				"username": "IDの入力",
+				"password": "パスワードの入力"
+			},
+			"buttons": {
+				"submit": "サインイン"
+			}
+		},
+		"projects": {
+			"labels": {
+				"title": "ホーム",
+				"projects": "プロジェクト",
+				"change_status_title": "プロジェクト状況の変更",
+				"change_status_msg": "プロジェクト状況を変更しますか？",
+				"delete_prj_title": "プロジェクト消去?",
+				"delete_prj_msg": "プロジェクトを消去しますか？",
+				"ph_project_code": "JOB番号",
+				"ph_facility_code": "装置コード",
+				"ph_project_name": "プロジェクト名",
+				"ph_client_name": "客先名",
+				"ph_facility_name": "装置名",
+				"ph_plant_name": "工場名",
+				"processing": "実行中",
+				"open": "開く",
+				"closed": "閉じる",
+				"no_projects": "該当プロジェクトなし",
+				"screenshot_success": "スクリーンショット完了"
+			},
+			"buttons": {
+				"filter": "@:pages.common.labels.filter",
+				"new_project": "新規プロジェクト作成",
+				"edit_project": "プロジェクトの編集",
+				"delete_project": "プロジェクトの削除",
+				"view_summary": "サマリーの表示",
+				"export_summary": "エキスポートサマリー",
+				"change_prj_status": "プロジェクト状況の変更"
+			}
+		},
+		"master": {
+			"labels": {
+				"title": "管理者マスターファイル",
+				"file_name": "ファイル名",
+				"master_type": "マスターファイルタイプ",
+				"uploaded_date": "アップロード日付",
+				"uploaded_by": "アップロード者",
+				"in_use": "動作中",
+				"backup": "バックアップ",
+				"invalid": "無効なフォーマットもしくはファイルです",
+				"delete_confirmation_title": "データファイルを消去しますか?",
+				"delete_confirmation_msg": "本当にデータファイルを消去しますか？",
+				"set_current_confirmation_title": "Set master?",
+				"set_current_confirmation_msg": "Do you really want to set the current file as the master data for the application?",
+				"upload_confirmation_title": "Upload master data file?",
+				"main_model": "標準モデル",
+				"lite_model": "軽量モデル",
+				"set_master": "Set as master",
+				"view_data": "View Master Data",
+				"housing_type": "ケーシングのタイプ",
+				"none_active_title": "No Active Master",
+				"none_active_msg": "No Active Master File(s) found. Please set a master file each for MAIN & LITE models as Active and then create a project"
+			},
+			"buttons": {
+				"view_data": "データ閲覧",
+				"set_master": "最新のマスターファイルの設定",
+				"delete_master": "マスターファイルの削除",
+				"upload_file": "マスターファイルの更新"
+			}
+		},
+		"users": {
+			"labels": {
+				"title": "Manage Users",
+				"users": "Users",
+				"user_id": "ユーザーID",
+				"role": "権限",
+				"disabled": "Disabled",
+				"first_name": "名",
+				"last_name": "姓",
+				"phone": "電話番号",
+				"roles": "権限",
+				"email": "Eメール",
+				"ph_userid": "ユーザーIDの入力",
+				"ph_pwd": "パスワードの入力",
+				"ph_email": "Eメールの入力",
+				"user": "ユーザー",
+				"administrator": "管理者",
+				"new_user": "新規ユーザー",
+				"no_users": "ユーザーが見つかません",
+				"leader": "Leader"
+			},
+			"buttons": {
+				"edit_user": "ユーザー情報の編集",
+				"reset_password": "ユーザーパスワードのリセット",
+				"disable_account": "無効なユーザーアカウント",
+				"enable_account": "有効なユーザーアカウント"
+			}
+		},
+		"profile": {
+			"labels": {
+				"user_id": "@:pages.users.labels.user_id",
+				"email": "@:pages.users.labels.email",
+				"first_name": "@:pages.users.labels.first_name",
+				"last_name": "@:pages.users.labels.last_name",
+				"phone": "@:pages.users.labels.phone",
+				"role": "@:pages.users.labels.role",
+				"change_pwd": "パスワードの変更",
+				"old_pwd": "現在のパスワード",
+				"new_pwd": "新しいパスワード"
+			}
+		},
+		"new_project": {
+			"labels": {
+				"title": "新規オーブン設計",
+				"alt_title": "オーブン設計の編集",
+				"all_mandatory": "全ファイルが必須です",
+				"step_1_title": "プロジェクト詳細",
+				"step_2_title": "レイアウト",
+				"step_3_title": "各寸法",
+				"step_4_title": "サマリー",
+				"library_title": "部品表",
+				"shape_title": "@:pages.new_project.labels.step_2_title",
+				"entry_exit_modules": "出入口部品",
+				"straight_zone_modules": "直線部部品",
+				"90_uturn_modules": "90°及びUターン部品",
+				"scroll_for_module_list": "下記にモジュールリストがあります",
+				"module_list_title": "モジュールリスト",
+				"basic_input_title": "基本情報の入力",
+				"st_zone_single": "直線部 (シングル)",
+				"st_zone_double": "直線部 (ダブル)",
+				"pre_heat": "プレヒート",
+				"sl_zone_single": "傾斜部 (シングル)",
+				"sl_zone_double": "傾斜部 (ダブル)",
+				"ut_symmetry": "Uターン シンメトリー",
+				"ut_conventional": "Uターン 循環",
+				"as_single": "エアーシール (シングル)",
+				"as_double": "エアーシール (ダブル)",
+				"heat_panel": "ヒートパネル",
+				"9t_single": "90°ターン　(シングル)",
+				"9t_double": "90°ターン (ダブル)",
+				"section_not_seen": "Don't see section dimensions? Add modules to create a shape, validate and check again",
+				"note_st_zone_width": "直線部の幅は標準Uターンの幅と一緒してください",
+				"note_st_zone_height": "直線部の高さは標準傾斜部の高さと一緒にしてください",
+				"summary_title": "設計のまとめ",
+				"zone_length": "@:application.domain.zone_length",
+				"module_type": "モジュールタイプ",
+				"design_summary_for_prj": "プロジェクトの設計のまとめ",
+				"components_on_stage": "レイアウト上の部品:",
+				"tile_count_stage": "レイアウトに部品がありません:",
+				"tile": "部品",
+				"new": "新規"
+			},
+			"buttons": {
+				"previous": "戻る",
+				"next": "次へ",
+				"submit": "提出",
+				"reset": "リセット"
+			},
+			"tooltips": {
+				"rotate_left": "90度左回転",
+				"rotate_right": "90度右回転°",
+				"reset_rotation": "回転のリセット",
+				"clear_shape": "部品のクリアー",
+				"validate_shape": "形状の検証",
+				"clear_validation": "検証結果のクリアー",
+				"capture_screenshot": "スクリーンショット取得",
+				"help": "ヘルプ",
+				"debug_info": "デバッグインフォーメーション"
+			},
+			"dialog": {
+				"help": {
+					"title": "Help",
+					"points": {
+						"create": {
+							"q": "Creating the Shape",
+							"a": "Components may be dragged from the toolbox and dropped into the Stage"
+						},
+						"selection": {
+							"q": "Selecting components (so you can rotate them)",
+							"a": "Click a component in the grid to 'Select'. Clicking the same element again toggles the selection. You may also click the 'Clear selection' button on the right toolbar for the same result."
+						},
+						"removal": {
+							"q": "Removing a component from the layout",
+							"a": "Double_click a component to remove it from the layout grid."
+						},
+						"rotation": {
+							"q": "Rotating components",
+							"a": "Select a component and click on either of the 'rotate' buttons to rotate the tiles. Click 'Reset' to restore to original position."
+						},
+						"validation": {
+							"q": "Validating the layout",
+							"a": "Click the 'Validate' button to validate the layout."
+						},
+						"clear_validation": {
+							"q": "Clear validation result",
+							"a": "Click the 'Clear selection/validation results' button on the right toolbar."
+						},
+						"restart": {
+							"q": "Starting afresh",
+							"a": "Click the 'Clear' button to clear an existing layout."
+						}
+					}
+				},
+				"debug": {
+					"title": "Debug Console",
+					"instruction": "Please copy the following info and send it to the developer along with a screenshot of the layout"
+				}
+			}
+		}
+	},
+	"messages": {
+		"offline": "現在オフラインモードで使用可能です",
+		"new_content": "最新情報があります。リフレッシュボタンで更新してください",
+		"action": {
+			"invalid": "実施が無効",
+			"login": "認証",
+			"list_users": "ユーザー取得",
+			"list_roles": "権限取得",
+			"password_reset": "パスワードのリセット",
+			"enable_user_account": "有効なユーザーアカウント",
+			"disable_user_account": "無効なユーザーアカウント",
+			"update_account_details": "アカウント詳細の更新",
+			"account_creation": "ユーザーアカウントの作成",
+			"capture_screenshot": "スクリーンショットの作成",
+			"shape_validation": "形状のバリエーション",
+			"user_update": "アカウント詳細の更新",
+			"password_update": "パスワードの更新"
+		},
+		"error": {
+			"shape_designer": {
+				"use_all": "ブロックレイアウトは部品表の部品のみを使用してください。この部品以外のものは削除願います",
+				"end_with_exit": "ブロックレイアウトの最終末端は必ず出口部品を使用してください",
+				"multiple_exit": "出口が複数有ります",
+				"no_exit": "出口がありません",
+				"multiple_entrance": "入口が複数あります",
+				"no_entrance": "入口がありません",
+				"no_components": "レイアウトに部品がありません。もう一度部品をドラッグ&ドロップしてください",
+				"no_selection": "レイアウト上の部品を選択してください",
+				"no_rotation": "既に部品があるために回転が出来ません",
+				"loop_back": "\tLooping back. Tile has already been visited: {0}",
+				"no_tile": "部品がありません"
+			},
+			"login": "ユーザー認証エラー",
+			"list_users": "ユーザー取得エラー",
+			"list_roles": "権限名のエラー",
+			"password_reset": "パスワードリセットのエラー",
+			"enable_user_account": "有効なユーザーアカウントエラー",
+			"disable_user_account": "無効なユーザーアカウントエラー",
+			"update_account_details": "ユーザーアカウント詳細の更新エラー",
+			"account_creation": "ユーザーアカウントの作成エラー",
+			"capture_screenshot": "スクリーンショットの作成エラー",
+			"shape_validation": "検証完了. 形状は有効です. 理由: {0}",
+			"user_update": "アカウント詳細の更新エラー",
+			"password_update": "パスワードの更新エラー"
+		},
+		"success": {
+			"login": "ユーザー認証完了",
+			"list_users": "ユーザー取得完了",
+			"list_roles": "アプリケーション権限の参照完了",
+			"password_reset": "パスワードのリセット完了",
+			"enable_user_account": "ユーザーアカウントの有効化完了",
+			"disable_user_account": "ユーザーアカウントの無効化完了",
+			"update_account_details": "ユーザーアカウント詳細の更新完了",
+			"account_creation": "ユーザーアカウントの作成完了",
+			"capture_screenshot": "スクリーンショット完了",
+			"shape_validation": "検証完了. 形状が無効です",
+			"user_update": "アカウント詳細の更新完了",
+			"password_update": "パスワードの更新完了"
+		}
+	}
+}

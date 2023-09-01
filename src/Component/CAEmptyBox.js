@@ -1,20 +1,25 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import './CAEmptyBox.scss';
 import { useDrop } from 'react-dnd';
 import CADroppedBox from './CADroppedBox';
-import { ItemType } from '../constants';
+import Data from '../Helper/constants';
+import PanelLibraryContext from '../Context/LibraryContext';
 
 function CAEmptyBox({ item }) {
+	const context = useContext(PanelLibraryContext);
+	let acceptArr = [];
+
+	if (Array.isArray(item.Accepts)) {
+		acceptArr = [...item.Accepts, Data.ItemType.MISCELLENEOUS];
+	} else {
+		acceptArr = [item.Accepts, Data.ItemType.MISCELLENEOUS];
+	}
+
 	const [droppedItem, setDroppedItem] = useState(null);
-	const [{ isOver, canDrop }, drop] = useDrop(() => ({
-		accept: [item.Accepts, ItemType.MISCELLENEOUS],
-		drop: (item) => {
-			console.log('Dropped item:', item);
-			if (!droppedItem) {
-				setDroppedItem(item);
-			}
-		},
+	const [{ isOver }, drop] = useDrop(() => ({
+		accept: acceptArr,
+		drop: dropHandler,
 		collect: (monitor) => ({
 			isOver: !!monitor.isOver(),
 			canDrop: monitor.canDrop(),
@@ -25,9 +30,25 @@ function CAEmptyBox({ item }) {
 	const boxStyle = {
 		width: width + 'px',
 		height: item.size * width + 'px',
-		opacity: canDrop === false ? '0.5' : '1',
+		// opacity: canDrop === false ? '0.5' : '1',
 		backgroundColor: isOver ? '#ff0000' : item.Color,
 	};
+
+	function dropHandler(dItem) {
+		console.log('Dropped item:', dItem);
+		console.log('prop item:', item);
+		if (!droppedItem) {
+			const it = {
+				type: dItem.Type,
+				placement: item.Name,
+				isStandard: dItem.IsStandard,
+				name: dItem.Name,
+				assemblyLine: 'M1',
+			};
+			console.log(context);
+			setDroppedItem(dItem);
+		}
+	}
 
 	return (
 		<div
