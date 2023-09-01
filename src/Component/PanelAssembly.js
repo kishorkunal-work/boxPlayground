@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import ComponentAssembly from './ComponentAssembly';
 import SelectionLibrary from './SelectionLibrary';
 
 function PanelAssembly() {
 	return (
-		<div style={{ display: 'flex' }}>
-			<div style={{ flex: '2' }}>
+		<div className="flex m-5">
+			<div className="flex-2 m-5">
 				<SelectionLibrary />
 			</div>
-			<div style={{ flex: '3', maxWidth: '55vw', overflowX: 'auto' }}>
+			<div className="flex-auto m-5">
 				<ComponentAssembly />
 			</div>
 		</div>
